@@ -1,0 +1,211 @@
+#menu-icon {
+    display: none;
+}
+
+* {
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #ededed;
+    color: white;
+}
+
+.heading {
+    position: flex;
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+    color: #333;
+    margin-top: 100px;
+}
+
+.heading {
+    position: relative;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 7%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    z-index: 100%;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    cursor: default;
+    margin-right: auto;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.7rem;
+    color: white;
+    font-weight: bold;
+    margin-right: 3.5rem;
+}
+
+.navbar a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: .2rem;
+    background: #ededed;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Split the container into two equal columns */
+    width: 80%;
+    /* Adjust width as needed */
+    height: 80%;
+    /* Adjust height as needed */
+}
+
+.grid-item {
+    display: flex;
+    padding: 10px;
+    /* Optional padding */
+}
+
+.grid-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    justify-content: center;
+}
+
+p {
+    position: relative;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+}
+
+
+.info {
+    text-align: center;
+    justify-content: center;
+}
+
+.info p {
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+
+}
+
+.info p span {
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bbbbbb;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #D3D3D3;
+    width: 50px;
+}
+
+
+@media(max-width:991px) {
+    header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 30px;
+
+    }
+
+    .navbar {
+        position: absolute;
+        box-shadow: 0 0 25px#333;
+        top: 250%;
+        height: 10000%;
+        right: 0;
+        width: 30%;
+        padding: 1rem 3%;
+        background: #EDEDED;
+        backdrop-filter: blur(20px);
+        opacity: 100%;
+        transform: scale(1.03);
+        transition: 0.5s;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        border-left: 2px solid #EDEDED;
+        border-bottom: 2px solid #EDEDED;
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: #333;
+    }
+
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Split the container into two equal columns */
+        width: 80%;
+        /* Adjust width as needed */
+        height: 80%;
+        /* Adjust height as needed */
+    }
+
+    /* Center the image within the grid cell */
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        /* Optional padding */
+    }
+
+    .grid-item img {
+        max-width: 500px;
+        max-height: 500px;
+        object-fit: contain;
+    }
+
+}
